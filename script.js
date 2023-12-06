@@ -1,31 +1,47 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const playAgainButton = document.getElementById('playagain-btn')
 const questionContainerElement = document.getElementById
 ('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-
+const questionBox = document.getElementById('question-box')
+const cortexCard = document.getElementById('cortex')
+const nGinCard = document.getElementById('ngin')
+const tinyCard = document.getElementById('tiny')
+const oxideCard = document.getElementById('oxide')
+// 0 - the original value of all of these counts:
 let cortexCount = 0
 let nGinCount = 0
 let tinyCount = 0
 let oxideCount = 0
 
+
+
+
+
 let shuffledQuestions, currentQuestionIndex
 
+
 startButton.addEventListener('click', startGame)
+playAgainButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
 
+
+
+
+
 function startGame(){
     console.log('Started')
     startButton.classList.add('hidden')
-    shuffledQuestions = question.sort(() => Math.random() - .5)
+    shuffledQuestions = question.sort(() => Math.random() - 0.5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hidden')
      setNextQuestion()
-}
+    }
 
 function setNextQuestion(){
     resetState()
@@ -75,25 +91,53 @@ function selectAnswer(e) { console.log(e)
         case '3':
             oxideCount++
             break;
+    } 
+
+    // let Math.max(cortexCount, nGinCount, tinyCount, oxideCount)
+    // console.log(Math.max)
+    // // cortexCard.classList.remove('hidden')
+
+    console.log(Math.max(cortexCount, nGinCount, tinyCount, oxideCount))
+
+    function displayPersonality() {
+        if (cortexCount >= 2) {
+            cortexCard.classList.remove('hidden')
+        }
+        if (nGinCount >=2) {
+            nGinCard.classList.remove('hidden')
+        }
+        if (tinyCount >=2) {
+            tinyCard.classList.remove('hidden')
+        }
+        if (oxideCount >=2) {
+            oxideCard.classList.remove('hidden')
+        }
     }
 
 
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hidden')
+        currentQuestionIndex++
+    setNextQuestion()
     } else {
         startButton.innerText ="Restart"
         startButton.classList.remove('hidden')
+        questionBox.classList.add('hidden')
+        displayPersonality()
+        // nGinCard.classList.remove('hidden')
+        
     } 
     
 }
+
+
 
 const question = [
     {
         question: 'What is your favourite type of weapon?',
         answers: [
             {text: 'Guns'},
-            {text: 'Missiles'},
+            {text: 'Explosives'},
             {text: 'Melee'},
             {text: 'Vehicles'}
         ]
@@ -123,6 +167,16 @@ const question = [
             {text: 'Share it with my peers!'},
             {text: 'Eat it!'},
             {text: 'Use it for my own benefit!'}
+        ]
+    },
+    
+    {
+        question: "My idea of a good time is...",
+        answers: [
+            {text: 'People praising how great I am!'},
+            {text: 'Working on a project'},
+            {text: 'Working out'},
+            {text: 'Driving on the open road'}
         ]
     }
 ]

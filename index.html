@@ -8,18 +8,20 @@
     <script defer src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body background="bg-tile-small.png" class="bg-auto">
-<img src="Crash_Bandicoot_Logo.webp" class="h-32 w-auto mx-auto mt-20">
-    <div class="mt-20 flex justify-center items-center  space-y-6">
+<body background="rumble-bg.webp" class="bg-cover">
+    <a href="index.html">
+<img src="which-villain-logo.png"  href class="h-80 w-auto mx-auto mt-4">
+</a>
+    <div id="question-box" class="mt-20 flex justify-center items-center  space-y-6">
         
-        <div class="bg-red-500 w-96 h-96 border">
+        <div class="bg-red-500 w-96 h-96 border-black border-5px rounded shadow-md">
             <div id="question-container" class="hidden px-6 py-4 text-center">
                 <div id="question">Question</div>
                 <div id="answer-buttons" class="btn mt-10 grid grid-cols-2 gap-10 px-6">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>                                                                                                                                                                                                                       
-                    <button class="btn">Answer 4</button>
+                    <button id='btn' class="btn">Answer 1</button>
+                    <button id='btn' class="btn">Answer 2</button>
+                    <button id='btn' class="btn">Answer 3</button>                                                                                                                                                                                                                       
+                    <button id='btn' class="btn">Answer 4</button>
                 </div>
                 </div>
                 <div class="controls w-full flex justify-center items-center">
@@ -29,5 +31,106 @@
                 </div>
         </div>
     </div>
+
+<!-- cortex -->
+<container id="cortex" class="hidden">
+    <div class=" h-screen flex justify-center items-center">
+        <div class="bg-red-500 w-auto h-auto border grid">
+            <div class=" grid-cols-2 justify-center">
+                <h1 class="text-center font-bold text-2xl mt-8 ">You are Dr Neo Cortex!</h1>
+                <img src="cortex.webp" class="mx-auto max-h-96 mt-10">
+                <br/>
+                <p class ="text-center text-xl mx-10  px-10">You're a typical narcissist who likes to have things their own way,</p>
+                <p class ="text-center text-xl mx-10 px-10">and when you don't get what you want you tear your hair out...and shoot people!</p>
+                <br/>
+                <br>
+                <div class="controls w-full flex justify-center items-center px-10 mb-6 mx-auto">
+                    <a href="index.html">
+                    <button id="playagain-btn" class="playagain-btn btn">Play again!</button>
+                </a>
+                    <button id="next-btn" class="next-btn btn hidden">Next</button>
+                
+                    
+             </div>
+                </div>
+            </div>
+        </div>
+    </container>
+        <!-- cortex -->
+
+
+        <!-- ngin -->
+        <container id="ngin" class="hidden">
+        <div class=" h-screen flex justify-center items-center ">
+            <div class="bg-red-500 w-auto h-auto border grid">
+                <div class=" grid-cols-2 justify-center">
+                    <h1 class="text-center font-bold text-2xl mt-8 ">You are Dr N. Gin!</h1>
+                    <img src="ngin.png" class="mx-auto max-h-96 mt-10">
+                    <br/>
+                    <p class ="text-center text-xl mx-10 px-10">You're a brainbox who cares only for cool gadgets inventing new things!</p>
+                    <p class ="text-center text-xl mx-10 px-10">You tend to get hyperfixated on new ideas because things get stuck in your head!</p>
+                    <br/>
+                    <br>
+                    <div class="controls w-full flex justify-center items-center px-10 mb-6 mx-auto">
+                        <a href="index.html">
+                        <button id="playagain-btn" class="playagain-btn btn">Play again!</button>
+                    </a>
+                        <button id="next-btn" class="next-btn btn hidden">Next</button>
+                        
+                 </div>
+                    </div>
+                </div>
+            </div>
+        </container>
+<!-- ngin -->
+
+<!-- tiny -->
+<container id="tiny" class="hidden">
+<div class=" h-screen flex justify-center items-center">
+    <div class="bg-red-500 w-auto h-auto border grid">
+        <div class=" grid-cols-2 justify-center">
+            <h1 class="text-center font-bold text-2xl mt-8 ">You are Tiny!</h1>
+            <img src="tiny.webp" class="mx-auto max-h-96 mt-10">
+            <br/>
+            <p class ="text-center text-xl mx-10 px-10">You're a gym feak who loves nothing more than meeting nice people, and crushing them in your monstrous hands!</p>
+            <p class ="text-center text-xl mx-10 px-10">But don't worry, we won't mention why they call you "Tiny"!</p>
+            <br/>
+            <br>
+            <div class="controls w-full flex justify-center items-center px-10 mb-6 mx-auto">
+                <a href="index.html">
+                <button id="start-btn" class="start-btn btn">Play again!</button>
+            </a>
+                <button id="next-btn" class="next-btn btn hidden">Next</button>
+                
+         </div>
+            </div>
+        </div>
+    </div>
+</container>
+    <!-- tiny -->
+    <!-- oxide -->
+    <container id="oxide" class="hidden">
+        <div class=" h-screen flex justify-center items-center">
+            <div class="bg-red-500 w-auto h-auto border grid">
+                <div class=" grid-cols-2 justify-center">
+                    <h1 class="text-center font-bold text-2xl mt-8 ">You are Nitros Oxide!</h1>
+                    <img src="oxide.webp" class="mx-auto max-h-96 mt-10">
+                    <br/>
+                    <p class ="text-center text-xl mx-20 px-10">You're a true petrol head who lives hard and fast!</p>
+                    <p class ="text-center text-xl mx-20 px-10">If you encounter a problem, you either run away, or run it over!</p>
+                    <br/>
+                    <br>
+                    <div class="controls w-full flex justify-center items-center px-10 mb-6 mx-auto">
+                        <a href="index.html">
+                        <button id="start-btn" class="start-btn btn">Play again!</button>
+                        </a>
+                        <button id="next-btn" class="next-btn btn hidden">Next</button>
+                        
+                 </div>
+                    </div>
+                </div>
+            </div>
+
+    </container>
 </body>
 </html>
