@@ -6,27 +6,36 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body background="bg-tile-small.png" class="bg-auto h-screen"></body>>
+<body background="rumble-bg.webp" class="bg-cover">
+    <a href="index.html">
+<img src="which-villain-logo.png"  href class="h-80 w-auto mx-auto mt-4">
+</a>
 
-    <div class=" h-screen flex justify-center items-center ">
-        <div class="bg-red-500 w-auto h-auto border grid">
+<container id="cortex" class="">
+    <div class=" h-screen flex justify-center items-center">
+        <div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500  w-auto h-auto  grid rounded-lg shadow-2xl shadow-inner">
             <div class=" grid-cols-2 justify-center">
-                <h1 class="text-center font-bold text-2xl mt-8 ">You are Nitros Oxide!</h1>
-                <img src="oxide.webp" class="mx-auto max-h-96 mt-10">
+                <h1 class="text-center font-bold text-2xl mt-8 ">You are Dr Neo Cortex!</h1>
+                <img src="cortex.webp" class="mx-auto max-h-96 mt-10">
                 <br/>
-                <p class ="text-center text-xl mx-20 px-10">You're a true petrol head who lives hard and fast!</p>
-                <p class ="text-center text-xl mx-20 px-10">If you encounter a problem, you either run from it, or run it over!!</p>
+                <div class="">
+                <p class ="text-center text-xl mx-10 font-bold px-10 ">You're a typical narcissist who likes to have things their own way,</p>
+                <p class ="text-center text-xl mx-10 font-bold px-10">and when you don't get what you want you tear your hair out...and shoot people!</p>
+            </div>
                 <br/>
                 <br>
                 <div class="controls w-full flex justify-center items-center px-10 mb-6 mx-auto">
-                    <button id="start-btn" class="start-btn btn">Play again!</button>
+                    <a href="index.html">
+                    <button id="playagain-btn" class="playagain-btn btn rounded-lg border border-black border-5px px-8 text-xl font-bold items-center shadow-2xl h-14 bg-gradient-to-b from-yellow-500 to-red-500 text-center jus">PLAY AGAIN</button>
+                </a>
                     <button id="next-btn" class="next-btn btn hidden">Next</button>
+                
                     
              </div>
                 </div>
             </div>
         </div>
-        
+    </container>
 </body>
 </html>
 
