@@ -10,6 +10,12 @@ const cortexCard = document.getElementById('cortex')
 const nGinCard = document.getElementById('ngin')
 const tinyCard = document.getElementById('tiny')
 const oxideCard = document.getElementById('oxide')
+const ntropyCard = document.getElementById('ntropy')
+const dingodileCard = document.getElementById('dingodile')
+const nbrioCard = document.getElementById('nbrio')
+const pinstripeCard = document.getElementById('pinstripe')
+const ukaukaCard = document.getElementById('ukauka')
+const ripperrooCard = document.getElementById('ripperroo')
 // 0 - the original value of all of these counts:
 let cortexCount = 0
 let nGinCount = 0
@@ -57,6 +63,29 @@ function showQuestion(question) {
         button.classList.add('btn')
         button.classList.add('bg-blue-500')
         button.classList.add('p-4')
+        button.classList.add('rounded-lg')
+        button.classList.add('border')
+        button.classList.add('border-black')
+        button.classList.add('border-4')
+        button.classList.add('font-bold')
+        button.classList.add('items-center')
+        button.classList.add('shadow-2xl')
+        button.classList.add('md:h-20')
+        button.classList.add('sm:h-10')
+        button.classList.add('md:w-60')
+        button.classList.add('sm:w-30')
+        button.classList.add('bg-gradient-to-b')
+        button.classList.add('from-yellow-500')
+        button.classList.add('to-red-500')
+        button.classList.add('text-center')
+        questionElement.classList.add('font-bold')
+        questionElement.classList.add('text-lg')
+
+
+
+
+
+
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
@@ -66,6 +95,7 @@ function showQuestion(question) {
         
     })
 }
+ 
  
 
 function resetState() {
@@ -111,6 +141,36 @@ function selectAnswer(e) { console.log(e)
         }
         if (oxideCount >=2) {
             oxideCard.classList.remove('hidden')
+        }
+        if (cortexCount >=2 && oxideCount >=2) {
+            ntropyCard.classList.remove('hidden')
+            cortexCard.classList.add('hidden')
+            oxideCard.classList.add('hidden')
+        }
+        if (nGinCount >=2 && tinyCount >=2) {
+            dingodileCard.classList.remove('hidden')
+            nGinCard.classList.add('hidden')
+            tinyCard.classList.add('hidden')
+        }
+        if (nGinCount >= 2 && oxideCount >=2) {
+            nbrioCard.classList.remove('hidden')
+            nGinCard.classList.add('hidden')
+            oxideCard.classList.add('hidden')
+        }
+        if (cortexCount >=2 && tinyCount >=2) {
+            ukaukaCard.classList.remove('hidden')
+            cortexCard.classList.add('hidden')
+            tinyCard.classList.add('hidden')
+        }
+        if (tinyCount >=2 && oxideCount >=2) {
+            ripperrooCard.classList.remove('hidden')
+            tinyCard.classList.add('hidden')
+            oxideCard.classList.add('hidden')
+        }
+        if (nGinCount >=2 && cortexCount >=2) {
+            pinstripeCard.classList.remove('hidden')
+            cortexCard.classList.add('hidden')
+            nGinCard.classList.add('hidden')
         }
     }
 
