@@ -72,8 +72,8 @@ function showQuestion(question) {
         button.classList.add('shadow-2xl')
         button.classList.add('md:h-20')
         button.classList.add('md:w-60')
-        button.classList.add('sm:w-40')
-        button.classList.add('sm:text-sm')
+        
+       
         button.classList.add('bg-gradient-to-b')
         button.classList.add('from-yellow-500')
         button.classList.add('to-red-500')
